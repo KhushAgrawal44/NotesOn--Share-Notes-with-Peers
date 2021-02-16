@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> NotesON | Dashboard </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <nav style="background-color: #00005c;" class="navbar navbar-expand-md  navbar-dark">
+    <a class="navbar-brand" href="/"> <img src="images/logo.png" alt="logo" width="50px" height="50px"> </a>
+          <div class="ml-auto">
+            <a  href="/profile" data-toggle="tooltip" title="view Profile" > <img src="images/user.png" alt="user"> </a>
+          </div>
+    </nav>
+
+    <nav  class="navbar navbar-expand-md bg-dark navbar-dark justify-content-center">
+          <div class="centernav">
+            <a  href="/browse" data-toggle="tooltip" title="Search For Notes"> <img src="images/browse.png" alt="dashboard"> </a>
+            <a  href="/new_note" data-toggle="tooltip" title="Post new Note" > <img src="images/newnote.png" alt="add new note"> </a>
+            <a  href="/dashboard" data-toggle="tooltip" title="Dashboard"> <img style="background-color:#eeeeee;padding:10px;border-radius:5px;" src="images/dashboard.png" alt="dashboard"> </a>
+            <a  href="/videos"  data-toggle="tooltip" title="Watch Educational Youtube Videos of your feild." > <img src="images/videos.png" alt="Videos"> </a>
+            <a  href="/dash"  data-toggle="tooltip" title="Your saved Youtube Videos" > <img src="images/save.png" alt="Saved Videos"> </a>
+          </div>
+    </nav>
+
+  <div class="dashboard">
+
+  <h3 style="color: #b5076b"><u>Your Uploads</u></h3>
+
+    <% if (notes.length===0){%>
+       <h1 style="color:#777;margin-top:20%;">You Haven't Uploaded any Notes Yet.</h1>
+    <% }%>
+
+    <% notes.forEach(function(note){%>
+
+      <div class="card">
+        <h3><u class="head-text">Category </u>: <%=note.category%></h3>
+        <h3><u class="head-text">Subject </u>: <%=note.subject%></h3>
+        <h3><u class="head-text"> Title</u> :<%=note.title%></h1>
+        <h3><u class="head-text"> Subtitle </u>: <%=note.subtitle%></h3>
+        <p><a class="btn btn-primary btn-lg" href="/notes/<%=note._id%>" role="button">Know More</a></p>
+     </div>
+    <%})%>
+  </div>
+
+  <script>
+ $(document).ready(function(){
+ $('[data-toggle="tooltip"]').tooltip();
+ });
+ </script>
+
+  </body>
+</html>

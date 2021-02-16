@@ -1,0 +1,27 @@
+.admin
+{
+  margin-top: 10%;
+  width: 60%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.half-width
+{
+  width: 40%;
+  margin-left:auto;
+  margin-right: auto;
+  text-align: center;
+  float: center;
+  display: inline-block;
+}
+
+.complete-width input
+{
+ width: 80%;
+ text-align: center;
+ margin-left:auto;
+ margin-right: auto;
+ float: center;
+}

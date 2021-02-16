@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>NotesON | Add</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/new_note.css">
+  <script src="https://kit.fontawesome.com/yourcode.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <nav style="background-color: #00005c;" class="navbar navbar-expand-md  navbar-dark">
+    <a class="navbar-brand" href="/"> <img src="images/logo.png" alt="logo" width="50px" height="50px"> </a>
+
+      <div class="ml-auto">
+        <a  href="/profile" data-toggle="tooltip" title="View Profile"  > <img src="images/user.png" alt="user"> </a>
+      </div>
+  </nav>
+
+
+  <nav  class="navbar navbar-expand-md bg-dark navbar-dark justify-content-center">
+        <div class="centernav">
+          <a  href="/browse" data-toggle="tooltip" title="Search For Notes"> <img src="images/browse.png" alt="dashboard"> </a>
+          <a  href="/new_note" data-toggle="tooltip" title="Post new Note" > <img style="background-color:#eeeeee;padding:10px;border-radius:5px;" src="images/newnote.png" alt="add new note"> </a>
+          <a  href="/dashboard" data-toggle="tooltip" title="Dashboard"> <img src="images/dashboard.png" alt="dashboard"> </a>
+          <a  href="/videos"  data-toggle="tooltip" title="Watch Educational Youtube Videos of your feild." > <img src="images/videos.png" alt="Videos"> </a>
+          <a  href="/dash"  data-toggle="tooltip" title="Your saved Youtube Videos" > <img src="images/save.png" alt="Saved Videos"> </a>
+        </div>
+  </nav>
+
+  <div class="new_note">
+
+     <h2>Share new Notes</h2>
+
+   <div class="new_note_form">
+
+     <form class="" action="/new_note" method="post" enctype="multipart/form-data">
+
+
+       <div class="complete-width">
+         <div class="form-group" >
+           <label>upload file: </label>
+           <input class="form-control"  type="file" name="note" value="" required>
+         </div>
+       </div>
+
+       <div class="half-width">
+         <div class="form-group" >
+           <label>Category: </label>
+           <select class="form-control" id="category" name="category" required>
+           <option value="Engineering">Engineering</option>
+           <option value="Medical">Medical</option>
+           <option value="CA">CA</option>
+          <option value="Others">Other</option>
+
+           </select>
+         </div>
+       </div>
+
+       <div class="half-width">
+         <div class="form-group" >
+           <label>Subject : </label>
+           <input class="form-control"  type="text" name="subject" value="" placeholder="eg: electronics" required>
+         </div>
+       </div>
+
+       <div class="complete-width">
+         <div class="form-group" >
+           <label>Title: </label>
+           <input class="form-control"  type="text" name="title" value="" required>
+         </div>
+       </div>
+
+       <div class="complete-width">
+         <div class="form-group" >
+           <label>Sub Title (if any): </label>
+           <input class="form-control"  type="text" name="subtitle" value="">
+         </div>
+       </div>
+
+       <div class="half-width">
+         <div class="form-group" >
+           <label>No of chapters: </label>
+           <input class="form-control"  type="number" name="num"  value="" required>
+         </div>
+       </div>
+
+       <div class="complete-width">
+         <div class="form-group" >
+           <label>Description: </label>
+           <textarea class="form-control"  type="text" name="description" placeholder="describe about contents, topics covered so that customer can understand what would they get out of your notes." value="" required></textarea>
+         </div>
+       </div>
+    <div class="complete-width">
+      <button class="btn btn-primary btn-lg" type="submit" name="button" >Share</button>
+    </div>
+    </form>
+  </div>
+  </div>
+
+  <script>
+  $(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+  });
+  </script>
+
+  </body>
+</html>

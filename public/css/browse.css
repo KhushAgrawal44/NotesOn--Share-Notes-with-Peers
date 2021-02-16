@@ -1,0 +1,92 @@
+body
+{
+  
+
+}
+
+.centernav
+{
+  width: 100%;
+  text-align: center;
+}
+
+.centernav a
+{
+
+  margin-left: 20px;
+}
+
+
+
+div.scrollmenu {
+  background-color: #b5076b;
+  overflow: auto;
+  white-space: nowrap;
+  text-align: center;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
+
+.browse
+{
+  text-align: center;
+}
+
+.all-notes
+{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.username
+{
+  background-color: #b5076b;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: 20px;
+
+  word-wrap: break-word;
+  font-family:serif;
+  background-color: #00005c;
+  color: white;
+ border: 5px solid #b5076b;
+  display: inline-block;
+}
+
+.head-text {
+  color:#ff5200;
+  text-align: left;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 1;
+}

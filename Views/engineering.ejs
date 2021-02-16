@@ -1,0 +1,65 @@
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+  <head>
+     <meta charset="utf-8">
+   <title>NotesON|Browse </title>
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/engineering.css">
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+
+     <nav style="background-color: #00005c;" class="navbar navbar-expand-md  navbar-dark">
+
+         <a class="navbar-brand" href="/"> <h3> <strong><u style="">Notes<span style="color:#b5076b">ON</span>  </u></strong></h3></a>
+         <div class="mid-menu">
+
+             <a  href="/dashboard" data-toggle="tooltip" title="Dashboard"> <img src="images/dashboard.png" alt="dashboard"> </a>
+             <a  href="/new_note" data-toggle="tooltip" title="Post new Note" > <img src="images/newnote.png" alt="add new note"> </a>
+
+         </div>
+
+         <div class="ml-auto">
+           <a  href="/profile" data-toggle="tooltip" title="View Profile" > <img src="images/user.png" alt="user"> </a>
+         </div>
+    </nav>
+
+    <div class="scrollmenu">
+      <a class="active" href="/browse">ALL</a>
+      <a href="/engineering" style="background-color: #777;">Engineering</a>
+      <a href="/medical">Medical</a>
+      <a href="/ca">CA</a>
+      <a href="/other">Other</a>
+    </div>
+
+
+    <div class="browse">
+
+     <h2 style="font-family:cursive"><u>Browse Engineering Notes</u></h2>
+
+     <div class="all-notes">
+       <% notes.forEach(function(note){%>
+         <div class="card">
+         <p class="username"><a href="/users/<%=note.notesource%>"  style="text-align:left;background-color:#b5076b; color:white;" ><%=note.sourcename%></a></p>
+         <h3><u class="head-text">Category </u>: <%=note.category%></h3>
+         <h3><u class="head-text">Subject </u>: <%=note.subject%></h3>
+         <h3><u class="head-text"> Title</u> :<%=note.title%></h1>
+         <h3><u class="head-text"> Subtitle </u>: <%=note.subtitle%></h3>
+         <p><a class="btn btn-primary btn-lg" href="/engineering/<%=note._id%>" role="button">Know More</a></p>
+         </div>
+       <% })%>
+     </div>
+     </div>
+
+     <script>
+ $(document).ready(function(){
+   $('[data-toggle="tooltip"]').tooltip();
+ });
+ </script>
+
+    </body>
+    </html>

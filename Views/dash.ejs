@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> NotesON | Dashboard </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dash.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <nav style="background-color: #00005c;" class="navbar navbar-expand-md  navbar-dark">
+    <a class="navbar-brand" href="/"> <img src="images/logo.png" alt="logo" width="50px" height="50px"> </a>
+
+          <div class="ml-auto">
+            <a  href="/profile" data-toggle="tooltip" title="view Profile" > <img src="images/user.png" alt="user"> </a>
+          </div>
+    </nav>
+
+    <nav  class="navbar navbar-expand-md bg-dark navbar-dark justify-content-center">
+          <div class="centernav">
+            <a  href="/browse" data-toggle="tooltip" title="Search For Notes"> <img src="images/browse.png" alt="dashboard"> </a>
+            <a  href="/new_note" data-toggle="tooltip" title="Post new Note" > <img src="images/newnote.png" alt="add new note"> </a>
+            <a  href="/dashboard" data-toggle="tooltip" title="Dashboard"> <img src="images/dashboard.png" alt="dashboard"> </a>
+            <a  href="/videos"  data-toggle="tooltip" title="Watch Educational Youtube Videos of your feild." > <img src="images/videos.png" alt="Videos"> </a>
+            <a  href="/dash"  data-toggle="tooltip" title="Your saved Youtube Videos" > <img style="background-color:#eeeeee;padding:10px;border-radius:5px;" src="images/save.png" alt="Saved Videos"> </a>
+          </div>
+    </nav>
+    <div class="saved-videos">
+
+      <h3 style="color: #b5076b"><u>Your Saved Videos</u></h3>
+
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%=alert%>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+     </div>
+
+      <% if (svideos.length===0){%>
+         <h1 style="color:#777;margin-top:20%;">You Haven't Saved any Videos Yet.</h1>
+      <% }%>
+
+      <% svideos.forEach(function(svideo){%>
+        <form class="" action="/delete" method="post">
+
+        <div class="card">
+
+          <iframe width="360" height="165" src="<%=svideo.embedlink%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <h4><%=svideo.title%></h4>
+           <button type="submit" name="button" value="<%=svideo._id%>"><img src="images/delete.png" alt="delete icon" ></button>
+       </div>
+       </form>
+      <%})%>
+    </div>
+
+    <script>
+   $(document).ready(function(){
+   $('[data-toggle="tooltip"]').tooltip();
+   });
+   </script>
+
+  </body>
+</html>

@@ -1,0 +1,71 @@
+.mid-menu
+{
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.centernav a
+{
+  margin-left: 20px;
+}
+
+.new_note
+{
+ text-align: center;
+}
+
+.new_note_form
+{
+  background-color: #00005c;
+  height:auto;
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid #b5076b;
+  border-radius: 20px;
+  color: white;
+}
+.half-width
+{
+  width: 40%;
+  margin-left:auto;
+  margin-right: auto;
+  text-align: center;
+  float: center;
+  display: inline-block;
+}
+
+.complete-width input
+{
+ width: 80%;
+ text-align: center;
+ margin-left:auto;
+ margin-right: auto;
+ float: center;
+}
+
+.complete-width textarea
+{
+ width: 80%;
+ text-align: center;
+ margin-left:auto;
+ margin-right: auto;
+ float: center;
+}
+
+button
+{
+  padding: 10px;
+
+}
+
+@media only screen and (max-width:768px) {
+  .new_note_form
+  {
+    width: 90%;
+
+  }
+}

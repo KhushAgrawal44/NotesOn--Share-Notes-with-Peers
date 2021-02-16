@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+ <html lang="en" dir="ltr">
+  <head>
+   <meta charset="utf-8">
+    <title>NotesON | User Profile </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+  .note
+   {
+    text-align: center;
+   }
+
+   .note-info
+   {
+     background-color: #00005c;
+     height:auto;
+     width: 60%;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+     border-radius: 20px;
+     border: 5px solid  #b5076b;
+     color: white;
+     padding: 20px;
+   }
+   .half-width
+   {
+     width: 40%;
+     margin-left:auto;
+     margin-right: auto;
+     text-align: center;
+     float: center;
+     display:block;
+   }
+
+   .complete-width h3
+   {
+    width: 80%;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+   float: center;
+   }
+
+   .complete-width p
+   {
+    width: 80%;
+    height: auto;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+   margin-bottom: 20px;
+   }
+
+   button
+   {
+     padding: 10px;
+   }
+
+   @media only screen and (max-width:768px) {
+     .note-info
+     {
+       width: 90%;
+     }
+   }
+ </style>
+  </head>
+  <body>
+    <nav style="background-color: #00005c;" class="navbar navbar-expand-md  navbar-dark">
+     <a class="navbar-brand" href="/"> <img src="images/bg-2des.jpg" alt="logo" width="50px" height="50px"> </a>
+     <div class="ml-auto">
+       <p><a class="btn btn-primary btn-lg" href="/browse" role="button">Back</a></p>
+     </div>
+    </nav>
+     <div class="note">
+        <h2 > User Profile</h2>
+      <div class="note-info">
+          <div class="half-width">
+              <label> <b> First Name: </b></label>
+              <h3  class="form-control"><b><%=fname%></b></h3>
+          </div>
+          <div class="half-width">
+              <label><b> Last Name </b></label>
+              <h3 class="form-control"> <b><%=lname%></b> </h3>
+            </div>
+          <div class="complete-width">
+              <label> <b>Email Id: </b> </label>
+              <h3 class="form-control"> <b><%=email%></b> </h3>
+          </div>
+     </div>
+     </div>
+ </body>
+ </html>

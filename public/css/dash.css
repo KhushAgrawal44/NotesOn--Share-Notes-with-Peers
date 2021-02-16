@@ -1,0 +1,42 @@
+.mid-menu
+{
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.centernav a
+{
+  margin-left: 20px;
+}
+
+.saved-videos
+{
+   text-align: center;
+}
+
+form
+{
+  display: inline-block;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 370px;
+  margin: 10px;
+  word-wrap: break-word;
+  font-family:serif;
+  border: 5px solid #b5076b;
+  display: inline-block;
+}
+.card h4
+{
+  background-color: #e0dede;
+  float: left;
+  display: inline-block;
+}
+.card button
+{
+  float: right;
+}

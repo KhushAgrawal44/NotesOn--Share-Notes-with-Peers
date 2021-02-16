@@ -1,0 +1,71 @@
+   <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+     <meta charset="utf-8">
+      <title>Dashboard </title>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+       <link rel="stylesheet" href="css/profile.css">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+     </head>
+     <body>
+
+       <nav style="background-color: #00005c;" class="navbar navbar-expand-md  navbar-dark">
+      <a class="navbar-brand" href="/"> <img src="images/logo.png" alt="logo" width="50px" height="50px"> </a>
+
+        <div class="ml-auto">
+          <a  href="/profile" data-toggle="tooltip" title="View Profile " > <img src="images/user.png" alt="user"> </a>
+        </div>
+       </nav>
+
+       <nav  class="navbar navbar-expand-md bg-dark navbar-dark justify-content-center">
+             <div class="centernav">
+               <a  href="/browse" data-toggle="tooltip" title="Search For Notes"> <img src="images/browse.png" alt="dashboard"> </a>
+               <a  href="/new_note" data-toggle="tooltip" title="Post new Note" > <img src="images/newnote.png" alt="add new note"> </a>
+               <a  href="/dashboard" data-toggle="tooltip" title="Dashboard"> <img src="images/dashboard.png" alt="dashboard"> </a>
+               <a  href="/videos"  data-toggle="tooltip" title="Watch Educational Youtube Videos of your feild." > <img src="images/videos.png" alt="Videos"> </a>
+               <a  href="/dash"  data-toggle="tooltip" title="Your saved Youtube Videos" > <img src="images/save.png" alt="Saved Videos"> </a>
+             </div>
+       </nav>
+
+        <div class="note">
+
+           <h2 > Your Profile</h2>
+
+         <div class="note-info">
+
+             <div class="half-width">
+
+                 <label> <b> First Name: </b></label>
+                 <h3  class="form-control"><b><%=fname%></b></h3>
+
+             </div>
+
+             <div class="half-width">
+
+                 <label><b> Last Name </b></label>
+                 <h3 class="form-control"> <b><%=lname%></b> </h3>
+               </div>
+
+
+             <div class="complete-width">
+
+                 <label> <b>Email Id: </b> </label>
+                 <h3 class="form-control"> <b><%=email%></b> </h3>
+
+             </div>
+        </div>
+        </div>
+
+        <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+
+    </body>
+    </html>

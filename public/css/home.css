@@ -1,0 +1,268 @@
+body,html
+{
+  height: 100%;
+  margin: 0;
+}
+
+.top-container
+{
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../images/bg2-des.jpg");
+  height: 80%;
+  width: 80%;
+  border-radius: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  font-family: serif;
+  position: relative;
+  margin-bottom: 20px;
+}
+.open-txt
+{
+  position: relative;; /* Position the background text */
+  top:10%;
+  bottom:20%; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0,0,92, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  padding: 20px; /* Some padding */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.top-2
+{
+  background: rgba(0,0,92, 0.8);
+  width: 60%;
+  height: auto;
+  color:#b5076b;
+  text-align: center;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+.q
+{
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255,255,255, 0.8);
+}
+
+.sol
+{
+  color:white;
+}
+
+.reg-log
+{
+  text-align:center;
+  margin-bottom: 50px;
+}
+
+.mid
+{
+  width: 100%;
+  height: auto;
+  background-image: url("../images/login-des.jpg");
+  text-align:center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  padding: 40px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front img
+{
+  margin: 10px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: white;
+  color: rgba(0,0,92);
+  font-family: serif;
+  border-radius: 10px;
+}
+/* Style the back side */
+.flip-card-back {
+  background-color:white;
+  color: rgba(0,0,92);
+  font-family: serif;
+  border-radius: 10px;
+  transform: rotateX(180deg);
+}
+
+.after-mid
+{
+  height: 500px;
+  width:90%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background-color: #f4f6ff;
+  border-radius: 20px;
+  position: relative;
+}
+
+.text
+{
+  background-color: #fbfd8a;
+  margin: 0;
+  top: 50%;
+  width: 70%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  color: rgba(0,0,92);
+  font-family:cursive;
+  position: relative;
+}
+.text p
+{
+  padding: 10px;
+}
+
+.all-cards
+{
+  margin-top: 100px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carda {
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  display: inline-block;
+}
+
+.carda p
+{
+  width: 250px;
+}
+
+.bottom
+{
+  margin-top: 50px;
+  background-color: #00005c;
+  height: 600px;
+  color:white;
+  text-align: center;
+}
+
+@media only screen and (max-width:768px) {
+  .top-container
+  {
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../images/bg2-mob.jpg");
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+  }
+  .open-txt
+  {
+    position: relative;; /* Position the background text */
+    top:20%;
+    bottom:20%; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0,0,92, 0.3); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    padding: 20px; /* Some padding */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .top-2
+  {
+    background: rgba(0,0,92, 0.8);
+    width: 90%;
+    height: auto;
+    color:#b5076b;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius: 20px;
+  }
+  .q
+  {
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255,255,255, 0.8);
+  }
+  .text
+  {
+    background-color: #fbfd8a;
+    margin: 0;
+    top: 50%;
+    width: 90%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    color: rgba(0,0,92);
+    font-family:cursive;
+    position: relative;
+  }
+}

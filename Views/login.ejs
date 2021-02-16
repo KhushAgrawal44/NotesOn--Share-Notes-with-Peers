@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NotesON | Log In</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<nav style="background-color: #00005c;" class="navbar navbar-expand-md  navbar-dark">
+<a class="navbar-brand" href="/"> <img src="images/logo.png" alt="logo" width="50px" height="50px"> </a>
+
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+  </div>
+</nav>
+<br>
+
+<div class="register">
+   <h2 style="font-family:serif">Log into your Account !</h2>
+ <div class="regis-form">
+   <form class="" action="/login" method="post">
+
+     <div class="complete-width">
+       <div class="form-group" >
+         <label>Email Id : </label>
+         <input class="form-control"  type="email" name="username" value="">
+       </div>
+     </div>
+
+     <div class="half-width">
+       <div class="form-group" >
+         <label>Enter Password : </label>
+         <input class="form-control"  type="password" name="password" value="">
+       </div>
+     </div>
+
+     <div class="complete-width">
+       <button class="btn btn-primary btn-lg" type="submit" name="button">LOG IN</button>
+       <div class="cad bg-primary" >
+         <div class="cad-body bg-danger">
+           <a class="btn btn-block " href="/auth/google" role="button">
+             <i class="fa fa-google" style="font-size:20px;float:left"></i>
+              Sign Up with Google
+           </a>
+         </div>
+       </div>
+     </div>
+  </form>
+</div>
+</div>
+</body>
+</html>
